@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body{
+   margin: 0; 
+   font-family: Roboto, "Helvetica Neue", sans-serif; 
+  }
+
+#title{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+#title h1{
+font-size: 50px;
+border-bottom: 1px solid #ccc;
+padding-bottom: 5px;
+}
+
+#title h2{
+    font-size: 25px;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+
+    article.about{
+        width: 75%;
+        margin: 0px, auto;
+        font-size: 23px;
+        margin-bottom: 20px;
+
+    }
+
+    .about h2{
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 5px;  
+      margin-left: 200px;
+    }
+
+    .about h3{
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 5px;  
+      margin-left: 200px;
+    }
+
+    .container{
+      padding: 50px;
+      padding-top: 10px;
+    }
+
+    .container h2{
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    form{
+      width: 50%;
+    }
+
+    form label{
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="email"],
+    form textarea{
+      width: 80%;
+      padding: 5px;
+    
+
+    }
+
+    form button,
+    form input[type="submit"]{
+      font-size: 17px;
+      display: block;
+      padding: 10px;
+      margin-top: 15px;
+      color:white;
+      background:#1B2755;
+      cursor: pointer;
+      border-radius: 5px;
+      border:none;
+    }
+
+    .message{
+      width: 50%;
+      padding: 5px;
+      border: 1px solid #eee;
+    }
+    .success{
+      background: green;
+      color: white;
+    }
+    .success a{
+      color: white;
+    }
+    .failed{
+      color: white;
+      background: red;
+    }
+
+    .project{
+      list-style: none;
+      display: block;
+      float: left;
+      width: 28%;
+      text-align: center;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .project .image{
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .project img{
+      width: 100%;
+    
+    }
+
+    #content{
+      min-height: 600px;
+      height: auto;
+      width: 75%;
+      margin: 0px auto;
+      box-shadow: 0px 0px 40px black;
+      border-left:1px solid #b7b7b7;
+      border-right:1px solid #b7b7b7;
+      background: rgba(255, 255, 255, 0.7);
+      padding-top: 120px;
+    }
+
+    .project a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .container .image{
+      float: left;
+      width: 47%;
+     
+    }
+
+    .container .data{
+      float: left;
+      width: 48%;
+      margin-left:30px;
+      margin-top: 40px;
+    }
+
+    .container .image img{
+      width: 100%;
+    }

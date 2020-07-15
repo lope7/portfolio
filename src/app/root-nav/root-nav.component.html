@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>MENU</mat-toolbar>
+    <mat-nav-list >
+      <a mat-list-item [routerLink]="['../sobre-mi']">ABOUT</a>
+      <a mat-list-item [routerLink]="['/proyectos']">PROJECTS</a>
+      <a mat-list-item [routerLink]="['/contacto']">CONTACT</a>
+      <a mat-list-item [routerLink]="['/crear-proyecto']">PRIVATE</a>
+      <a mat-list-item [routerLink]="['/login']">LOGIN</a>
+    
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="iconos">
+        <h2><i class="fa fa-code" aria-hidden="true"></i>
+          lope martínez;</h2>
+        
+        
+      <a href="https://www.facebook.com/lope.martinez.9"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>&nbsp;
+      <a href="https://www.instagram.com/lopemartinez_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;
+      <a href="https://twitter.com/lopemaal"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;
+      <a href="https://github.com/lope7"><i class="fa fa-github" aria-hidden="true"></i></a>&nbsp;
+      </div>
+      
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

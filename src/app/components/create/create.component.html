@@ -1,0 +1,62 @@
+<div class="container" *ngIf="project">
+	<h2>{{title}}</h2>
+
+	<div class="message success" *ngIf="status == 'success'">
+		Project saved successfully, you can <a [routerLink]="['/proyecto', save_project._id]">see it here</a>
+	</div>
+
+	<div class="message failed" *ngIf="status == 'failed'">
+		There was a problem while save.
+	</div>
+
+	<form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+		<p>
+			<label for="name">Name</label>
+			<input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required />
+			<span class="form_error" *ngIf="name.touched && !name.valid">
+				Field required
+			</span>
+		</p>
+
+		<p>
+			<label for="description">Description</label>
+			<textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+			<span class="form_error" *ngIf="description.touched && !description.valid">
+				Field required
+			</span>
+		</p>
+
+		<p>
+			<label for="category">Category</label>
+			<input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required />
+			<span class="form_error" *ngIf="category.touched && !category.valid">
+				Field required
+			</span>
+		</p>
+
+		<p>
+			<label for="year">Year</label>
+			<input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" />
+		</p>
+
+		<p>
+			<label for="langs">Languages and frameworks</label>
+			<input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required />
+			<span class="form_error" *ngIf="langs.touched && !langs.valid">
+				Field required
+			</span>
+		</p>
+
+		<p>
+			<label for="image">Image</label>
+			<span class="image" *ngIf="project.image" style="float:none;">
+				
+			</span><br/>
+			<input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
+		</p>
+
+		<input type="submit" value="Create" [disabled]="!projectForm.form.valid" />
+	</form>
+</div>
+
+
